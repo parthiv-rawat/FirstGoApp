@@ -41,19 +41,19 @@ func helloHandler(write http.ResponseWriter, read *http.Request) {
 	fmt.Printf("Handling function with %s request\n", read.Method)
 }
 
-func htmlvsPlain(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("htmlvsPlain")
-	w.Header().Set("Content-type", "text/html")
-	fmt.Fprint(w, "<h1>Hello World!</h1>")
-}
+// func htmlvsPlain(w http.ResponseWriter, r *http.Request) {
+// 	fmt.Println("htmlvsPlain")
+// 	w.Header().Set("Content-type", "text/html")
+// 	fmt.Fprint(w, "<h1>Hello World!</h1>")
+// }
 
-func timeout(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Timeout Attempt")
-	time.Sleep(2 * time.Second)
-	fmt.Fprint(w, "Did *not* timeout")
-}
+// func timeout(w http.ResponseWriter, r *http.Request) {
+// 	fmt.Println("Timeout Attempt")
+// 	time.Sleep(2 * time.Second)
+// 	fmt.Fprint(w, "Did *not* timeout")
+// }
 
-func helloWorldGuardianMode(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("helloWorldGuardianMode")
-	fmt.Fprint(w, "<h1 style=\"background-color:grey;\">Hello World!</h1>")
-}
+// func helloWorldGuardianMode(w http.ResponseWriter, r *http.Request) {
+// 	fmt.Println("helloWorldGuardianMode")
+// 	fmt.Fprint(w, "<h1 style=\"background-color:grey;\">Hello World!</h1>")
+// }
