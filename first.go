@@ -7,25 +7,25 @@ import (
 )
 
 func main() {
-	// http.HandleFunc("/", htmlvsPlain)
-	// fmt.Print("The server is running at port 8080.")
-	// http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", helloHandler)
+	fmt.Print("The server is running at port 8080.")
+	http.ListenAndServe(":8080", nil)
 
-	server := http.Server{
-		Addr:         ":8080",
-		Handler:      nil,
-		ReadTimeout:  1000,
-		WriteTimeout: 1000,
-	}
+// 	server := http.Server{
+// 		Addr:         ":8080",
+// 		Handler:      nil,
+// 		ReadTimeout:  1000,
+// 		WriteTimeout: 1000,
+// 	}
 
 	// server.ListenAndServe()
 
-	var muxGuardianMode http.ServeMux
-	server.Handler = &muxGuardianMode
-	muxGuardianMode.HandleFunc("/", helloWorldGuardianMode)
-	http.HandleFunc("/timeout", timeout)
+// 	var muxGuardianMode http.ServeMux
+// 	server.Handler = &muxGuardianMode
+// 	muxGuardianMode.HandleFunc("/", helloWorldGuardianMode)
+// 	http.HandleFunc("/timeout", timeout)
 
-	server.ListenAndServe()
+// 	server.ListenAndServe()
 }
 
 func helloHandler(write http.ResponseWriter, read *http.Request) {
