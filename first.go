@@ -9,7 +9,7 @@ import (
 func main() {
 	http.HandleFunc("/", helloHandler)
 	fmt.Print("The server is running at port 8080.")
-	http.ListenAndServe(":8080", nil)
+// 	http.ListenAndServe(":8080", nil)
 
 // 	server := http.Server{
 // 		Addr:         ":8080",
